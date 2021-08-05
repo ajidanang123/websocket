@@ -15,10 +15,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=hidessh.com
-organizationalunit=hidessh.com
-commonname=hidessh.com
-email=admin@hidessh.com
+organization=ajivpn.com
+organizationalunit=ajivpn.com
+commonname=ajivpn.clm
+email=ajivpn@gmail.com
 
 cd
 # common password debian 
@@ -83,9 +83,9 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo Selamat Datang HideSSH !" >> .profile
+echo "echo HALO" >> .profile
 echo "echo Ketik menu untuk melihat list" >> .profile
-echo "echo VPSmu Terinstall AutoScript by HideSSh" >> .profile
+echo "echo VPSmu Terinstall AutoScript by AJIvpn" >> .profile
 echo "echo Terimakasih !" >> .profile
 
 # install webserver
@@ -134,23 +134,18 @@ sed -i $MYIP2 /etc/squid/squid.conf
 # install stunnel
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
-cert = /etc/stunnel/stunnel.pem
-client = no
-socket = a:SO_REUSEADDR=1
-socket = l:TCP_NODELAY=1
-socket = r:TCP_NODELAY=1
-
-[dropbear]
-accept = 444
-connect = 127.0.0.1:44
-
-[OpenSSH]
-accept = 222
+cert = /etc/stunnel/stunnel.pem                                                     
+client = no                                                                     
+socket = a:SO_REUSEADDR=1                                                       
+socket = l:TCP_NODELAY=1                                                        
+socket = r:TCP_NODELAY=1                                                        
+                                                                                
+[dropbear]                                                                      
+accept = 3126                                                                   
+connect = 127.0.0.1:443                                                         
+[OpenSSH]                                                                       
+accept = 222                                                                    
 connect = 127.0.0.1:22
-
-[openvpn]
-accept = 442
-connect = 127.0.0.1:1194
 
 END
 
@@ -189,7 +184,7 @@ service sslh restart
 #CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 #AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 #NoNewPrivileges=true
-#ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 8880
+#ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 80
 #Restart=on-failure
 #[Install]
 #WantedBy=multi-user.target
