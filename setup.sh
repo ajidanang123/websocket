@@ -29,15 +29,13 @@ echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 
 #install ssh ovpn
-wget https://raw.githubusercontent.com/4hidessh/websocket/main/ssh.sh && chmod +x ssh.sh && screen -S ssh.sh ./ssh.sh
+wget https://raw.githubusercontent.com/ajidanang123/websocket/main/ssh.sh && chmod +x ssh.sh && screen -S ssh.sh ./ssh.sh
 #wget https://adiscript.vercel.app/vpn/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
 #wget https://adiscript.vercel.app/vpn/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 #wget https://adiscript.vercel.app/vpn/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
 #wget https://adiscript.vercel.app/vpn/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-#install v2ray
-#wget http://adiscript.vercel.app/vpn/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
 #wget https://adiscript.vercel.app/vpn/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 #wget https://adiscript.vercel.app/vpn/set-br.sh && chmod +x set-br.sh && ./set-br.sh
@@ -82,7 +80,7 @@ echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 442"  | tee -a log-install.txt
 echo "   - Stunnel4                : 443, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
-echo "   - WebSocket               : 2082"  | tee -a log-install.txt
+echo "   - WebSocket               : 2082, 443"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
 echo "   - Nginx                   : 81"  | tee -a log-install.txt
@@ -114,13 +112,13 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : Adi Project"  | tee -a log-install.txt
-echo "   - Telegram                : T.me/adisubagja"  | tee -a log-install.txt
-echo "   - Instagram               : @adisubagja.id"  | tee -a log-install.txt
+echo "   - Dev/Main                : Ajidanang "  | tee -a log-install.txt
+echo "   - Telegram                : T.me/kuntull"  | tee -a log-install.txt
+echo "   - Instagram               : @sedyoningrat_ajidanang"  | tee -a log-install.txt
 echo "   - Whatsapp                : Gapunya"  | tee -a log-install.txt
-echo "   - Facebook                : https://www.facebook.com/adisubagja.mint" | tee -a log-install.txt
+echo "   - Facebook                : https://www.facebook.com/" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "------------------Script Modified By Adi Subagja-----------------" | tee -a log-install.txt
+echo "------------------Script Modified By Adi -----------------" | tee -a log-install.txt
 echo ""
 echo " Harap Reboot Manual ! "
 sleep 12
