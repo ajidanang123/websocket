@@ -202,7 +202,7 @@ apt -y install fail2ban
 
 # Custom Banner SSH
 echo "================  Banner ======================"
-wget -O /etc/issue.net "https://github.com/idtunnel/sshtunnel/raw/master/debian9/banner-custom.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/ajidanang123/banner/main/banner.txt"
 chmod +x /etc/issue.net
 
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
